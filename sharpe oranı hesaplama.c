@@ -5,7 +5,7 @@
 
 int main() {
 	
-    float yatirim_faizi,risksiz_faiz_orani,standart_sapma;    // kullanýcýdan alýnacak üç deðer
+    float yatirim_faizi,risksiz_faiz_orani,standart_sapma;    // kullanÄ±cÄ±dan alÄ±nacak Ã¼Ã§ deÄŸer
 	float risk_primi, sharpe_orani;
 	
 	printf("yatirim faizini giriniz");
@@ -14,20 +14,20 @@ int main() {
 	printf("risksiz faiz oranini giriniz");
 	scanf("%f",&risksiz_faiz_orani);
 	
-	printf("standart sapmayý giriniz");
+	printf("standart sapmayÄ± giriniz");
 	scanf("%f",&standart_sapma);
 	
-	//yatýrým faizinden risksiz faiz oranýný çýkararak risk primini hesaplýyoruz
+	//yatÄ±rÄ±m faizinden risksiz faiz oranÄ±nÄ± Ã§Ä±kararak risk primini hesaplÄ±yoruz
 	
 	risk_primi = yatirim_faizi - risksiz_faiz_orani;
 	printf("Risk primi: %.2f\n", risk_primi);
 	
-	//risk primini sttandart sapmaya bölerek sharpe oranýný hesaplýyoruz
+	//risk primini sttandart sapmaya bÃ¶lerek sharpe oranÄ±nÄ± hesaplÄ±yoruz
 	
 	sharpe_orani = risk_primi / standart_sapma;
     printf("Sharpe orani: %.2f\n", sharpe_orani);
     
-    // Sharpe oranýna göre deðerlendirme
+    // Sharpe oranÄ±na gÃ¶re deÄŸerlendirme
     
     if (sharpe_orani > 3) {
         printf("Degerlendirme: Mukemmel bir performans!\n");
@@ -38,7 +38,11 @@ int main() {
     else if (sharpe_orani > 1) {
         printf("Degerlendirme: Iyi bir performans.\n");
     } 
+    else if(sharpe_orani < 0) {
+    	printf("DeÄŸerlendirme: negatif bir performans.\n");
+	}
 
 
 	return 0;
 }
+
