@@ -29,3 +29,4 @@ sharpe oranı = risk primi/standart sapma
 > 2 → Çok iyi performans 
 
 > 1 → İyi performans 
+< 0 → negatif performans
